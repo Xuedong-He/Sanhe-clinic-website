@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>San He Tang Acupuncture & Herbal Center - Dublin, CA</title>
+  <meta name="description" content="Professional acupuncture & TCM herbal treatments in Dublin, CA. Personalized plans for cardiovascular, digestive, women's health, diabetes, pain, insomnia and more." />
+  <link rel="icon" href="data:," />
+  <style>
+    :root { --brand:#0b6b4d; --brand-dark:#07533b; --bg:#f6faf8; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#fff;color:#0f172a;line-height:1.6;scroll-behavior:smooth}
+    header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid #e5e7eb}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
+    .brand{font-weight:700;color:var(--brand);white-space:nowrap}
+    nav{display:flex;gap:14px;overflow-x:auto;padding:10px 0}
+    nav a{padding:6px 10px;border-radius:999px;text-decoration:none;color:#0f172a;white-space:nowrap;border:1px solid transparent}
+    nav a:hover{border-color:#d1d5db}
+    .btn{background:var(--brand);color:#fff;border:none;border-radius:999px;padding:10px 16px;font-weight:600;cursor:pointer}
+    .btn:hover{background:var(--brand-dark)}
+    section{padding:48px 0;scroll-margin-top:90px}
+    .hero{background:#e6f5ef;text-align:center}
+    h1,h2{color:var(--brand);margin:0 0 12px}
+    h3{margin:18px 0 8px}
+    ul{padding-left:18px;margin:10px 0}
+    .grid{display:grid;gap:16px}
+    @media(min-width:768px){ .grid.cols-2{grid-template-columns:1fr 1fr} .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid #e5e7eb;cursor:zoom-in}
+    /* Lightbox */
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;padding:20px;z-index:1000}
+    .overlay.open{display:flex}
+    .overlay img{max-width:92vw;max-height:86vh;border-radius:12px}
+    .ol-ctrl{position:absolute;top:12px;right:12px;background:#000a;color:#fff;border:1px solid #fff;border-radius:999px;padding:6px 10px;cursor:pointer}
+    .ol-prev,.ol-next{position:absolute;top:50%;transform:translateY(-50%);background:#000a;color:#fff;border:1px solid #fff;border-radius:999px;padding:8px 12px;cursor:pointer}
+    .ol-prev{left:16px} .ol-next{right:16px}
+    /* Modal (Appointment) */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:1000}
+    .modal.open{display:flex}
+    .card{background:#fff;border-radius:12px;max-width:720px;width:min(96vw,720px);max-height:90vh;overflow:auto;padding:16px;box-shadow:0 12px 30px rgba(0,0,0,.15)}
+    .row{display:grid;gap:10px}
+    @media(min-width:640px){ .row.cols-2{grid-template-columns:1fr 1fr} }
+    label span{display:block;font-size:12px;color:#64748b;margin-bottom:4px}
+    input,select,textarea{width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:10px}
+    footer{background:#111;color:#fff;text-align:center;padding:16px}
+    small{opacity:.9}
+    .muted{color:#64748b}
+  </style>
+  <!-- Structured Data for Local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalClinic",
+    "name":"San He Tang Acupuncture & Herbal Center",
+    "telephone":"+1-925-999-9629",
+    "email":"danaherbaldublin@gmail.com",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"4288 Dublin Blvd #221",
+      "addressLocality":"Dublin",
+      "addressRegion":"CA",
+      "postalCode":"94568",
+      "addressCountry":"US"
+    },
+    "url":"https://example.com",
+    "image":[
+      "https://lh3.googleusercontent.com/p/AF1QipNJX7-9clFTTCjDsZN7THUTpr-E7AfcaP2N1bN5=s1360-w1360-h1020-rw",
+      "https://lh3.googleusercontent.com/p/AF1QipPZODHx8c9l8HW85qFLWV_rZCfq514ds7iEFdyP=s1360-w1360-h1020-rw",
+      "https://lh3.googleusercontent.com/p/AF1QipOssdV6iPNMkpHA5DrD0nfaOb99TAYnCgKgc0O6=s1360-w1360-h1020-rw"
+    ],
+    "medicalSpecialty":[
+      "Acupuncture","Cardiovascular","Gastroenterologic","Gynecologic","Endocrine","ChronicPain","SleepMedicine"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <div class="brand" id="site-title">San He Tang Acupuncture & Herbal Center</div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <nav>
+            <a href="#about" id="nav-about">About</a>
+            <a href="#services" id="nav-services">Services</a>
+            <a href="#photos" id="nav-photos">Photos</a>
+            <a href="#contact" id="nav-contact">Contact</a>
+          </nav>
+          <button class="btn" id="book-btn">Book Appointment</button>
+          <button class="btn" id="lang-btn" style="background:#fff;color:var(--brand);border:1px solid #d1d5db">中文</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container" style="padding:28px 16px">
+      <h1 id="hero-title">Acupuncture · Herbal Medicine · Tuina · Moxibustion · Cupping</h1>
+      <p class="muted" id="hero-sub">Personalized TCM care in Dublin, CA</p>
+      <div style="margin-top:10px">
+        <a class="btn" href="#contact" id="cta-anchor">Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 id="about-title">About Us</h2>
+      <div id="about-text" class="grid">
+        <div>
+          San He Tang Acupuncture and Herbal Center brings together Chinese medicine experts with over 40 years of experience, along with a team of highly skilled acupuncturists and herbalists, dedicated to providing professional and effective TCM treatments. We specialize in personalized treatment plans that integrate acupuncture and herbal therapy, complemented by traditional techniques such as moxibustion, cupping, and Tuina, to create tailored health solutions for our patients. We carefully select high‑quality herbal medicines to ensure safe and effective care. In addition, we provide telemedicine consultations, prescription services, and herbal delivery so patients can access care wherever they are.
+        </div>
+      </div>
+      <div class="grid cols-2" style="margin-top:14px">
+        <div>
+          <h3 id="hours-title">Hours</h3>
+          <ul id="hours-list">
+            <li>Mon–Fri: 9:00am – 6:00pm</li>
+            <li>Sat: 10:00am – 4:00pm</li>
+            <li>Sun: Closed</li>
+          </ul>
+        </div>
+        <div>
+          <h3 id="high-title">Highlights</h3>
+          <ul id="high-list">
+            <li>Telemedicine Consultations</li>
+            <li>Prescription Services</li>
+            <li>Herbal Delivery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 id="services-title">Services</h2>
+      <div class="grid cols-2">
+        <ul id="svc-col1">
+          <li>Acupuncture Therapy</li>
+          <li>Herbal Treatment</li>
+          <li>Tuina Massage Therapy</li>
+          <li>Cardiovascular Diseases (Hypertension, Coronary Heart Disease, Stroke Recovery)</li>
+        </ul>
+        <ul id="svc-col2">
+          <li>Digestive Disorders (Gastritis, Acid Reflux, IBS)</li>
+          <li>Gynecological Conditions (Menstrual Disorders, Menopause Syndrome, Infertility)</li>
+          <li>Diabetes and Complication Management</li>
+          <li>Stress, Anxiety & Insomnia</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos">
+    <div class="container">
+      <h2 id="photos-title">Photos</h2>
+      <div class="gallery" id="gallery">
+        <!-- Images will be inserted by JS for i18n safety; default static fallback below -->
+        <img src="https://lh3.googleusercontent.com/p/AF1QipNJX7-9clFTTCjDsZN7THUTpr-E7AfcaP2N1bN5=s1360-w1360-h1020-rw" alt="Clinic photo 1" data-idx="0" />
+        <img src="https://lh3.googleusercontent.com/p/AF1QipPZODHx8c9l8HW85qFLWV_rZCfq514ds7iEFdyP=s1360-w1360-h1020-rw" alt="Clinic photo 2" data-idx="1" />
+        <img src="https://lh3.googleusercontent.com/p/AF1QipOssdV6iPNMkpHA5DrD0nfaOb99TAYnCgKgc0O6=s1360-w1360-h1020-rw" alt="Clinic photo 3" data-idx="2" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 id="contact-title">Contact Us</h2>
+      <p id="contact-addr">📍 4288 Dublin Blvd #221, Dublin, CA 94568</p>
+      <p id="contact-phone">📞 <a href="tel:+19259999629">(925) 999-9629</a></p>
+      <p id="contact-email">✉️ <a href="mailto:danaherbaldublin@gmail.com">danaherbaldublin@gmail.com</a></p>
+      <a class="btn" id="dir-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=4288%20Dublin%20Blvd%20%23221%2C%20Dublin%2C%20CA%2094568">Get Directions</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <small>© 2025 Dublin Acupuncture & Herbal Center</small>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="overlay" id="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="preview" />
+    <button class="ol-ctrl" id="lb-close">Close</button>
+    <button class="ol-prev" id="lb-prev" aria-label="Previous">‹</button>
+    <button class="ol-next" id="lb-next" aria-label="Next">›</button>
+  </div>
+
+  <!-- Appointment Modal -->
+  <div class="modal" id="appt">
+    <div class="card" role="dialog" aria-modal="true">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <h3 id="form-title" style="margin:0">Book Appointment</h3>
+        <button class="btn" id="form-close" style="background:#fff;color:var(--brand);border:1px solid #d1d5db">Close</button>
+      </div>
+      <form id="appt-form" class="row" onsubmit="return false">
+        <div class="row cols-2">
+          <label><span id="lbl-name">Name</span><input id="f-name" required placeholder="Your name" /></label>
+          <label>
+            <span id="lbl-gender">Gender</span>
+            <select id="f-gender">
+              <option value="" id="opt-select">Select</option>
+              <option id="opt-male" value="Male">Male</option>
+              <option id="opt-female" value="Female">Female</option>
+              <option id="opt-other" value="Other">Other</option>
+            </select>
+          </label>
+        </div>
+        <label><span id="lbl-cond">What would you like to be seen for?</span><textarea id="f-cond" rows="4" placeholder="e.g., neck pain, insomnia, menstrual issues, hypertension…"></textarea></label>
+        <div class="row cols-2">
+          <label><span id="lbl-time">Preferred appointment time</span><input id="f-time" type="datetime-local" /></label>
+          <label><span id="lbl-phone">Phone</span><input id="f-phone" placeholder="(925) 999-9629" /></label>
+        </div>
+        <div class="row cols-2">
+          <label><span>Email</span><input id="f-email" type="email" placeholder="name@example.com" /></label>
+          <label><span id="lbl-wechat">WeChat</span><input id="f-wechat" placeholder="WeChat ID" /></label>
+        </div>
+        <div style="display:flex;gap:8px;justify-content:flex-end">
+          <button type="button" class="btn" id="form-cancel" style="background:#fff;color:var(--brand);border:1px solid #d1d5db">Cancel</button>
+          <button type="submit" class="btn" id="form-submit">Submit</button>
+        </div>
+      </form>
+      <div class="muted" style="margin-top:10px" id="fallback">
+        If email doesn't open, contact us: 📞 (925) 999-9629 · ✉️ danaherbaldublin@gmail.com
+      </div>
+    </div>
+  </div>
+
+<script>
+/* ---------- i18n Dictionary ---------- */
+const dict = {
+  en: {
+    siteTitle: "San He Tang Acupuncture & Herbal Center",
+    nav: { about:"About", services:"Services", photos:"Photos", contact:"Contact" },
+    heroTitle: "Acupuncture · Herbal Medicine · Tuina · Moxibustion · Cupping",
+    heroSub: "Personalized TCM care in Dublin, CA",
+    cta: "Get Directions",
+    aboutTitle: "About Us",
+    aboutHTML: "San He Tang Acupuncture and Herbal Center brings together Chinese medicine experts with over 40 years of experience, along with a team of highly skilled acupuncturists and herbalists, dedicated to providing professional and effective TCM treatments. We specialize in personalized treatment plans that integrate acupuncture and herbal therapy, complemented by traditional techniques such as moxibustion, cupping, and Tuina, to create tailored health solutions for our patients. We carefully select high‑quality herbal medicines to ensure safe and effective care. In addition, we provide telemedicine consultations, prescription services, and herbal delivery so patients can access care wherever they are.",
+    hoursTitle: "Hours",
+    hours: ["Mon–Fri: 9:00am – 6:00pm", "Sat: 10:00am – 4:00pm", "Sun: Closed"],
+    highTitle: "Highlights",
+    highlights: ["Telemedicine Consultations", "Prescription Services", "Herbal Delivery"],
+    servicesTitle: "Services",
+    svc1: ["Acupuncture Therapy","Herbal Treatment","Tui Na Massage Therapy","Cardiovascular Diseases (Hypertension, Coronary Heart Disease, Stroke Recovery)"],
+    svc2: ["Digestive Disorders (Gastritis, Acid Reflux, IBS)","Gynecological Conditions (Menstrual Disorders, Menopause Syndrome, Infertility)","Diabetes and Complication Management","Stress, Anxiety & Insomnia"],
+    photosTitle: "Photos",
+    contactTitle: "Contact Us",
+    addr: "📍 4288 Dublin Blvd #221, Dublin, CA 94568",
+    phoneHTML: '📞 <a href="tel:+19259999629">(925) 999-9629</a>',
+    emailHTML: '✉️ <a href="mailto:danaherbaldublin@gmail.com">danaherbaldublin@gmail.com</a>',
+    dirBtn: "Get Directions",
+    book: "Book Appointment",
+    langBtn: "中文",
+    // form
+    form: {
+      title:"Book Appointment",
+      name:"Name",
+      gender:"Gender",
+      select:"Select", male:"Male", female:"Female", other:"Other",
+      cond:"What would you like to be seen for?",
+      time:"Preferred appointment time",
+      phone:"Phone", wechat:"WeChat",
+      cancel:"Cancel", submit:"Submit", close:"Close",
+      fallback:"If email doesn't open, contact us: 📞 (925) 999-9629 · ✉️ danaherbaldublin@gmail.com"
+    },
+    placeholders: {
+      name:"Your name",
+      cond:"e.g., neck pain, insomnia, menstrual issues, hypertension…",
+      phone:"(925) 999-9629",
+      email:"name@example.com",
+      wechat:"WeChat ID"
+    }
+  },
+  zh: {
+    siteTitle: "三和堂中医诊疗中心",
+    nav: { about:"关于我们", services:"诊疗项目", photos:"相册", contact:"联系我们" },
+    heroTitle: "针灸 · 中药 · 推拿 · 艾灸 · 拔罐",
+    heroSub: "服务于加州都柏林的个性化中医诊疗",
+    cta: "打开导航",
+    aboutTitle: "关于我们",
+    aboutHTML: "三和堂汇集了临床经验“超过40年”的中医专家，以及多位经验丰富的针灸师和草药治疗师，致力于为患者提供专业高效的中医诊疗服务。在治疗方面，我们主要采用针灸、中草药疗法，结合艾灸、拔罐、推拿等传统中医技术，为顾客量身定制个性化的健康治疗方案。同时，我们精选优质中药材，确保用药安全有效；同时，我们可提供远程问诊、处方服务和中草药邮寄，让顾客无论身在何处，都能享受到便捷的中医服务。",
+    hoursTitle: "营业时间",
+    hours: ["周一至周五：9:00 - 18:00","周六：10:00 - 16:00","周日：休息"],
+    highTitle: "特色服务",
+    highlights: ["远程问诊","处方服务","中草药邮寄"],
+    servicesTitle: "诊疗项目",
+    svc1: ["针灸治疗","草药调理","推拿理疗","心脑血管疾病（如高血压、冠心病、中风康复）"],
+    svc2: ["消化系统疾病（如胃炎、胃酸过多、肠易激综合征）","妇科疾病（如月经不调、更年期综合征、不孕不育）","糖尿病及并发症的调理","压力焦虑与失眠"],
+    photosTitle: "相册",
+    contactTitle: "联系我们",
+    addr: "📍 4288 Dublin Blvd #221, Dublin, CA 94568",
+    phoneHTML: '📞 <a href="tel:+19259999629">(925) 999-9629</a>',
+    emailHTML: '✉️ <a href="mailto:danaherbaldublin@gmail.com">danaherbaldublin@gmail.com</a>',
+    dirBtn: "打开导航",
+    book: "预约就诊",
+    langBtn: "EN",
+    // form
+    form: {
+      title:"预约就诊",
+      name:"姓名",
+      gender:"性别",
+      select:"请选择", male:"男", female:"女", other:"其他",
+      cond:"就诊需求",
+      time:"期望就诊时间",
+      phone:"联系电话", wechat:"微信",
+      cancel:"取消", submit:"提交", close:"关闭",
+      fallback:"如果邮箱未能自动打开，也可直接联系：📞 (925) 999-9629 · ✉️ danaherbaldublin@gmail.com"
+    },
+    placeholders: {
+      name:"您的姓名",
+      cond:"如：颈肩痛、失眠、月经不调、高血压…",
+      phone:"请输入电话",
+      email:"name@example.com",
+      wechat:"微信号"
+    }
+  }
+};
+
+const gallery = [
+  "https://lh3.googleusercontent.com/p/AF1QipNJX7-9clFTTCjDsZN7THUTpr-E7AfcaP2N1bN5=s1360-w1360-h1020-rw",
+  "https://lh3.googleusercontent.com/p/AF1QipPZODHx8c9l8HW85qFLWV_rZCfq514ds7iEFdyP=s1360-w1360-h1020-rw",
+  "https://lh3.googleusercontent.com/p/AF1QipOssdV6iPNMkpHA5DrD0nfaOb99TAYnCgKgc0O6=s1360-w1360-h1020-rw"
+];
+
+let lang = "en"; // default
+const qs = (id)=>document.getElementById(id);
+function render(){
+  const t = dict[lang];
+  qs("site-title").textContent = t.siteTitle;
+  qs("nav-about").textContent = t.nav.about;
+  qs("nav-services").textContent = t.nav.services;
+  qs("nav-photos").textContent = t.nav.photos;
+  qs("nav-contact").textContent = t.nav.contact;
+
+  qs("book-btn").textContent = t.book;
+  qs("lang-btn").textContent = t.langBtn;
+  qs("hero-title").textContent = t.heroTitle;
+  qs("hero-sub").textContent = t.heroSub;
+  qs("cta-anchor").textContent = t.cta;
+  qs("about-title").textContent = t.aboutTitle;
+  qs("about-text").innerHTML = t.aboutHTML;
+  qs("hours-title").textContent = t.hoursTitle;
+  qs("hours-list").innerHTML = t.hours.map(x=>`<li>${x}</li>`).join("");
+  qs("high-title").textContent = t.highTitle;
+  qs("high-list").innerHTML = t.highlights.map(x=>`<li>${x}</li>`).join("");
+  qs("services-title").textContent = t.servicesTitle;
+  qs("svc-col1").innerHTML = t.svc1.map(x=>`<li>${x}</li>`).join("");
+  qs("svc-col2").innerHTML = t.svc2.map(x=>`<li>${x}</li>`).join("");
+  qs("photos-title").textContent = t.photosTitle;
+  qs("contact-title").textContent = t.contactTitle;
+  qs("contact-addr").textContent = t.addr;
+  qs("contact-phone").innerHTML = t.phoneHTML;
+  qs("contact-email").innerHTML = t.emailHTML;
+  qs("dir-btn").textContent = t.dirBtn;
+
+  // Form
+  qs("form-title").textContent = t.form.title;
+  qs("form-close").textContent = t.form.close;
+  qs("lbl-name").textContent = t.form.name;
+  qs("lbl-gender").textContent = t.form.gender;
+  qs("opt-select").textContent = t.form.select;
+  qs("opt-male").textContent = t.form.male;
+  qs("opt-female").textContent = t.form.female;
+  qs("opt-other").textContent = t.form.other;
+  qs("lbl-cond").textContent = t.form.cond;
+  qs("lbl-time").textContent = t.form.time;
+  qs("lbl-phone").textContent = t.form.phone;
+  qs("lbl-wechat").textContent = t.form.wechat;
+  qs("form-cancel").textContent = t.form.cancel;
+  qs("form-submit").textContent = t.form.submit;
+  qs("fallback").textContent = t.form.fallback;
+
+  // Placeholders
+  qs("f-name").placeholder = t.placeholders.name;
+  qs("f-cond").placeholder = t.placeholders.cond;
+  qs("f-phone").placeholder = t.placeholders.phone;
+  qs("f-email").placeholder = t.placeholders.email;
+  qs("f-wechat").placeholder = t.placeholders.wechat;
+
+  // Gallery (ensure data-idx & alt in current language)
+  const g = qs("gallery");
+  g.innerHTML = "";
+  gallery.forEach((src,i)=>{
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = lang==="zh" ? `诊所照片 ${i+1}` : `Clinic photo ${i+1}`;
+    img.dataset.idx = i;
+    img.addEventListener("click",()=>openLightbox(i));
+    g.appendChild(img);
+  });
+}
+
+function toggleLang(){
+  lang = (lang==="en" ? "zh" : "en");
+  render();
+}
+
+/* ---------- Appointment modal + mailto ---------- */
+function openAppt(){ qs("appt").classList.add("open"); }
+function closeAppt(){ qs("appt").classList.remove("open"); }
+function submitAppt(e){
+  e.preventDefault();
+  const t = dict[lang], mail = "danaherbaldublin@gmail.com";
+  const name = qs("f-name").value.trim();
+  const gender = qs("f-gender").value;
+  const cond = qs("f-cond").value.trim();
+  const time = qs("f-time").value;
+  const phone = qs("f-phone").value.trim();
+  const email = qs("f-email").value.trim();
+  const wechat = qs("f-wechat").value.trim();
+  const subject = encodeURIComponent((lang==="zh"?"预约就诊":"Appointment Request") + (name?(" - " + name):""));
+  const bodyLines = [
+    (lang==="zh"?"姓名":"Name")+": "+name,
+    (lang==="zh"?"性别":"Gender")+": "+gender,
+    (lang==="zh"?"就诊需求":"Concern")+": "+cond,
+    (lang==="zh"?"期望时间":"Preferred time")+": "+time,
+    (lang==="zh"?"电话":"Phone")+": "+phone,
+    "Email: "+email,
+    (lang==="zh"?"微信":"WeChat")+": "+wechat
+  ];
+  const body = encodeURIComponent(bodyLines.join("\n"));
+  window.location.href = `mailto:${mail}?subject=${subject}&body=${body}`;
+  closeAppt();
+}
+
+/* ---------- Lightbox ---------- */
+let lbIndex = 0;
+function openLightbox(i){
+  lbIndex = i;
+  qs("lightbox").classList.add("open");
+  qs("lightbox-img").src = gallery[lbIndex];
+  qs("lightbox").setAttribute("aria-hidden","false");
+}
+function closeLightbox(){
+  qs("lightbox").classList.remove("open");
+  qs("lightbox").setAttribute("aria-hidden","true");
+}
+function prev(){ lbIndex = (lbIndex - 1 + gallery.length) % gallery.length; qs("lightbox-img").src = gallery[lbIndex]; }
+function next(){ lbIndex = (lbIndex + 1) % gallery.length; qs("lightbox-img").src = gallery[lbIndex]; }
+
+/* ---------- Wire up ---------- */
+document.addEventListener("DOMContentLoaded", ()=>{
+  // Initial render
+  render();
+
+  // Buttons
+  qs("lang-btn").addEventListener("click", toggleLang);
+  qs("book-btn").addEventListener("click", openAppt);
+  qs("form-close").addEventListener("click", closeAppt);
+  qs("form-cancel").addEventListener("click", closeAppt);
+  qs("appt-form").addEventListener("submit", submitAppt);
+
+  // Lightbox controls
+  qs("lb-close").addEventListener("click", closeLightbox);
+  qs("lb-prev").addEventListener("click", prev);
+  qs("lb-next").addEventListener("click", next);
+  qs("lightbox").addEventListener("click",(e)=>{ if(e.target.id==="lightbox") closeLightbox(); });
+
+  // ESC to close overlays
+  document.addEventListener("keydown",(e)=>{
+    if(e.key==="Escape"){ closeAppt(); closeLightbox(); }
+    if(e.key==="ArrowLeft"){ prev(); }
+    if(e.key==="ArrowRight"){ next(); }
+  });
+});
+</script>
+</body>
+</html>
